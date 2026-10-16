@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df=pd.read_csv("/content/retail_store_sales.csv")
+
+#print(df)
+
+#df.head()
+#df.tail()
+…df["Transaction Date"]=pd.to_datetime(df["Transaction Date"])
+#print(df["Transaction Date"].describe())
+
+#df["Total Spent"].hist()
+
+df["Payment Method"].value_counts().plot(kind="bar")
